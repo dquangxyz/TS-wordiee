@@ -1,0 +1,10 @@
+.letter {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    margin: 0.25em;
+    border-radius: 4px;
+    padding: 0.35em;
+    cursor: pointer;
+}
