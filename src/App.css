@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(31, 36, 31);
 }
 
 .App-logo {
@@ -40,4 +41,5 @@
 .board-container {
   display: flex;
   justify-content: center;
+  background-color: rgb(31, 36, 31);
 }
