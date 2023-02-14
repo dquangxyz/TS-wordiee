@@ -17,12 +17,13 @@ const Keyboard: React.FC = () => {
 
     useEffect(()=>{
       document.addEventListener('keydown', (e)=>{
+        let val = e.key.toUpperCase()
         if (e.key === "Backspace"){
           dispatch(boardActions.deleteLetter())
         } else if (e.key === "Enter"){
           dispatch(boardActions.enterNextAttempt())
-        } else {
-          dispatch(boardActions.addNewLetter(e.key.toUpperCase()))
+        } else if (rows[0].includes(val) || rows[1].includes(val) || rows[2].includes(val)) {
+          dispatch(boardActions.addNewLetter(val))
         }
       })
     }, [])
