@@ -10,7 +10,8 @@ const initialState = {
         "", "", "", "", "",
     ],
     currentPosition: 0,
-    attempt: 0
+    attempt: 0,
+    correctWord: "REACT"
 }
 
 

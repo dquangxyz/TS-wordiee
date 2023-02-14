@@ -8,3 +8,14 @@
     cursor: pointer;
     place-items: center;
 }
+.green-correct {
+    background-color: #528d4e;
+}
+
+.yellow-almost {
+    background-color: #b49f39;
+}
+
+.grey-wrong {
+    background-color: #3a393c;
+}

@@ -7,12 +7,15 @@ import Keyboard from './components/Keyboard/Keyboard';
 
 import './App.css';
 
-interface boardState {
-  board: string[]
+interface globalState {
+  board: string[],
+  currentPosition: number,
+  attempt: number,
+  correctWord: string
 }
 
 function App() {
-  const board = useSelector((state: boardState) => state.board)
+  const board = useSelector((state: globalState) => state.board)
 
   return (
     <div className="App">
