@@ -23,7 +23,7 @@ const boardSlice = createSlice({
     initialState: initialState,
     reducers: {
         addNewLetter(state, action){
-            if (state.currentPosition < (1 + state.attempt)*5){
+            if (state.currentPosition < (1 + state.attempt)*5 && state.attempt<6){
                 state.board[state.currentPosition] = action.payload
                 state.currentPosition++
             }    
@@ -35,7 +35,7 @@ const boardSlice = createSlice({
             }
         },
         enterNextAttempt(state){
-            if (state.attempt < 6){
+            if (state.attempt < 6 && state.currentPosition%5 === 0){
                 state.attempt++
             }
         }
