@@ -1,3 +1,9 @@
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(31, 36, 31);
+}
+
 .App {
   text-align: center;
   background-color: rgb(31, 36, 31);
@@ -42,4 +48,6 @@
   display: flex;
   justify-content: center;
   background-color: rgb(31, 36, 31);
+  margin-top: 30px;
 }
+
