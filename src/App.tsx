@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import Heading from './components/Heading/Heading';
 import Board from './components/Board/Board';
 import Keyboard from './components/Keyboard/Keyboard';
+import Gameover from './components/Gameover/Gameover';
 
 import './App.css';
 
@@ -11,7 +12,8 @@ interface globalState {
   board: string[],
   currentPosition: number,
   attempt: number,
-  correctWord: string
+  correctWord: string,
+  gameover: boolean
 }
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
         <Board board={board} />
       </div>
       <Keyboard />
+      <Gameover />
     </div>
   );
 }

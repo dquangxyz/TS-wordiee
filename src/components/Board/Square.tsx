@@ -11,7 +11,8 @@ interface globalState {
   board: string[],
   currentPosition: number,
   attempt: number,
-  correctWord: string
+  correctWord: string,
+  gameover: boolean
 }
 
 
