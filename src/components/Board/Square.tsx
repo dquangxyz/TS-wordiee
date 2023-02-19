@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+import { globalState } from '../interface'
 
 import './Square.css'
 
@@ -7,14 +8,6 @@ interface IProps {
     val: string,
     index: number
 }
-interface globalState {
-  board: string[],
-  currentPosition: number,
-  attempt: number,
-  correctWord: string,
-  gameover: boolean
-}
-
 
 const Square: React.FC<IProps> = (props) => {
   // global state

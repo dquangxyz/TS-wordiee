@@ -1,14 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { globalState } from '../interface'
 import './Gameover.css'
-
-interface globalState {
-    board: string[],
-    currentPosition: number,
-    attempt: number,
-    correctWord: string,
-    gameover: boolean
-}
 
 const Gameover =() => {
     // global state
@@ -22,6 +15,8 @@ const Gameover =() => {
             {!gameover && attempt === 6 && <h3>Oops, you failed to find out the secret word</h3>}
             {attempt === 6 && <h1>Correct word: {correctWord.toUpperCase()}</h1>}
             {gameover && <h3>You guessed in {attempt} attempts </h3>}
+            
+            <h1>Correct word: {correctWord.toUpperCase()}</h1>
         </div>
     )
 }
