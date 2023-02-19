@@ -8,3 +8,14 @@
     padding: 0.35em;
     cursor: pointer;
 }
+.green-correct {
+    background-color: #528d4e !important;
+}
+
+.yellow-almost {
+    background-color: #b49f39 !important;
+}
+
+.grey-wrong {
+    background-color: #3a393c !important;
+}
