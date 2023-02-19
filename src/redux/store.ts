@@ -1,9 +1,10 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit'
 import wordList from '../words.json'
+import { globalState } from '../components/interface'
 
 let randomNum = Math.floor(Math.random() * wordList.words.length)
 
-const initialState = {
+const initialState: globalState = {
     board: [
         "", "", "", "", "",
         "", "", "", "", "",
@@ -15,6 +16,7 @@ const initialState = {
     currentPosition: 0,
     attempt: 0,
     correctWord: wordList.words[randomNum].toUpperCase(),
+    guessedWords: [],
     gameover: false
 }
 
@@ -43,12 +45,13 @@ const boardSlice = createSlice({
                 for (let i=5; i>0; i--){
                     currentAttemptWordArr.push(state.board[state.currentPosition-i])
                 }
-                const currentAttemptWord = currentAttemptWordArr.join("").toLowerCase()
+                const currentAttemptWord = currentAttemptWordArr.join("")
+                state.guessedWords.push(currentAttemptWord)
 
-                if (currentAttemptWord === state.correctWord.toLowerCase()){
+                if (currentAttemptWord.toLowerCase() === state.correctWord.toLowerCase()){
                     state.attempt++
                     state.gameover = true
-                } else if (wordList.words.includes(currentAttemptWord)){
+                } else if (wordList.words.includes(currentAttemptWord.toLowerCase())){
                     state.attempt++
                 } else {
                     alert("No such word")
