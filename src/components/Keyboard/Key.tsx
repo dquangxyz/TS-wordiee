@@ -52,8 +52,6 @@ const Key: React.FC<IProps> = (props) => {
       }
     })
 
-    console.log(archive)
-
     if (guessedLetters.includes(props.letter)){ // change color of guessed letter only
       if (archive.correct.includes(props.letter)){
         setCheckedColor("green-correct")

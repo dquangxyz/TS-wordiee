@@ -46,12 +46,13 @@ const boardSlice = createSlice({
                     currentAttemptWordArr.push(state.board[state.currentPosition-i])
                 }
                 const currentAttemptWord = currentAttemptWordArr.join("")
-                state.guessedWords.push(currentAttemptWord)
 
                 if (currentAttemptWord.toLowerCase() === state.correctWord.toLowerCase()){
+                    state.guessedWords.push(currentAttemptWord)
                     state.attempt++
                     state.gameover = true
                 } else if (wordList.words.includes(currentAttemptWord.toLowerCase())){
+                    state.guessedWords.push(currentAttemptWord)
                     state.attempt++
                 } else {
                     alert("No such word")
