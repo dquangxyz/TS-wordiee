@@ -1,0 +1,33 @@
+.how-to-play {
+    text-decoration: underline;
+    color: white;
+    font-style: italic;
+}
+.how-to-play:hover {
+    cursor: pointer;
+}
+.instruction {
+    width: 400px;
+    height: 400px;
+    background-color: #5b5959;
+    color: white;
+    position: absolute;
+}
+.row.example {
+    width: 290px;
+    margin: auto
+}
+.letter.example{
+    margin: 5px;
+}
+.green-correct {
+    background-color: #528d4e !important;
+}
+
+.yellow-almost {
+    background-color: #b49f39 !important;
+}
+
+.grey-wrong {
+    background-color: #3a393c !important;
+}
