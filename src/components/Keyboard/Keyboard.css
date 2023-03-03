@@ -21,3 +21,9 @@
     padding: 0 0.2em;
     line-height: 2.5em;
 }
+@media only screen and (max-width: 600px) {
+    .letter-box-special {
+        margin: 0;
+        padding: 0;
+    }
+}

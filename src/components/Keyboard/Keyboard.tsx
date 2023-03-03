@@ -42,7 +42,7 @@ const Keyboard: React.FC = () => {
               {row.map((letter, index) => {
                 return (
                   <>
-                  {letter === "Z" && <div className='letter-box-special'>Enter</div>}
+                  {letter === "Z" && <div className='letter-box-special'><div>Enter</div></div>}
 
                   <div className='letter-box'>
                     <Key letter={letter}/>
