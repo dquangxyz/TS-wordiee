@@ -20,6 +20,7 @@ interface globalState {
 function App() {
   // global state
   const board = useSelector((state: globalState) => state.board)
+  const gameover = useSelector((state: globalState) => state.gameover)
 
   // local state
   const [showRule, setShowRule] = useState<boolean>(false)
@@ -30,6 +31,7 @@ function App() {
       <Heading type='h2' text='Another worlde clone game' />
 
       <div onClick={()=> setShowRule(!showRule)} className='how-to-play'>How to play</div>
+
       { showRule && <Instruction/>}  
       <div className='board-container'>
         <Board board={board} />
