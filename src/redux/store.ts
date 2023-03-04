@@ -39,7 +39,7 @@ const boardSlice = createSlice({
         },
         enterNextAttempt(state){
             // check if within the allowed attempts, and if all 5 letters has been entered
-            if (!state.gameover && state.attempt < 6 && state.currentPosition%5 === 0){
+            if (!state.gameover && state.attempt < 6 && state.currentPosition === (1+state.attempt)*5){
                 // check if the word exists then only attempt++
                 const currentAttemptWordArr:string[] = []
                 for (let i=5; i>0; i--){
